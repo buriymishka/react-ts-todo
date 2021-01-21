@@ -5,7 +5,7 @@ const Header: React.FC = () => {
     <header>
       <nav className="blue darken-1">
         <div className="nav-wrapper container">
-          <a href="/" className="brand-logo center">React ts todo</a>
+          <div className="brand-logo center">React ts todo</div>
         </div>
       </nav>
     </header>

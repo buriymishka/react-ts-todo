@@ -9,7 +9,7 @@ type TodoItemProps = {
 
 const TodoItem: React.FC<TodoItemProps> = ({todo, deleteTodo, toggleTodo}) => {
 
-  const deleteTodoHandler = (e: React.MouseEvent, id: number) => {
+  const deleteTodoHandler = (e: React.MouseEvent) => {
     e.preventDefault()
     deleteTodo(todo.id)
   }
@@ -26,7 +26,7 @@ const TodoItem: React.FC<TodoItemProps> = ({todo, deleteTodo, toggleTodo}) => {
             <input type="checkbox" checked={todo.completed} onChange={() => toggleTodo(todo.id)}/>
             <span></span>
           </label>
-          <i className="material-icons" style={{cursor: 'pointer'}} onClick={(e) => deleteTodoHandler(e, todo.id)}>delete</i>
+          <i className="material-icons" style={{cursor: 'pointer'}} onClick={(e) => deleteTodoHandler(e)}>delete</i>
         </span>
       </div>
     </li>
